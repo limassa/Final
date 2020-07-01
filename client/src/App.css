@@ -24,9 +24,22 @@
   color: white;
 }
 
+.imagens{
+  width: 500px;
+  text-align: center;
+  padding-left: 750px;
+}
+
+
 .App-link {
   color: #61dafb;
 }
+
+.Contato{
+  font-size: 15px;
+  text-align: center;
+}
+
 
 @keyframes App-logo-spin {
   from {

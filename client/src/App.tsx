@@ -1,10 +1,12 @@
 import React from 'react';
 import './App.css';
 import {BrowserRouter,Route,Link} from 'react-router-dom';
-import Home from './Telas/Home';
+import ProdutosLista from './Telas/Home';
 import Produtos from './Telas/Produtos';
 import Carrinho from './Telas/Carrinho'
 import 'primeicons/primeicons.css'
+import Slide from './Telas/listaProdutos'
+import ConfCompra from './Telas/contato'
 
 function App() {
      
@@ -22,28 +24,23 @@ const openMenu = () => {
         <div className="brand">
             
             <Link to="/" className="pi pi-home"></Link>        
+            <Link to="/Produtos" > Produtos</Link> 
+
         </div>
            <div className="header-link" style={{fontSize: '20px'}}>
            <a className="pi pi-shopping-cart" href="/carrinho"></a>
           </div>
           </header>
-           <aside className="sidebar">
-               <h3>Categorias</h3>
-               <button className="sidebar-close-button" onClick={closeMenu}>x</button> 
-              <ul>
-                  <li>
-                      <a href="index.html">Futebol</a>
-                  </li>
-              </ul>
-           </aside>
+      
               <main className="main">
                   <div className="content">
                       
-                      <Route path="/produtos/:_id" component={Produtos} />
-                      <Route path="/" exact={true} component={Home}/>
-                      <Route path='/carrinho' component={Carrinho}/> 
-                
-                 
+                  <Route path="/produtos/:_id" component={Produtos} />
+                      <Route path="/" exact={true} component={Slide}/>
+                      <Route path="/Produtos" component={ProdutosLista} />
+                      <Route path="/ConfCompra" component={ConfCompra} />
+                      <Route path="/carrinho" component={Carrinho}/>
+
               </div>
 
            </main>

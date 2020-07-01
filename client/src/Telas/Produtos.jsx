@@ -11,14 +11,16 @@ function ProductScreen (props) {
         localStorage.setItem('carrinho', ( localStorage.getItem('carrinho')? [localStorage.getItem('carrinho'), JSON.stringify(produto)] : JSON.stringify(produto)))
         localStorage.getItem('carrinho')
         console.log('Adicione carrinho')
+        let txt = "Produto Inserido"
+        alert(txt)
     }
 
     return <div className = 'produto'>
-        <img className="produto-imagem" src={produto.imagem} alt="produto" />
+        <center>< img className="produto-imagem" src={produto.imagem} /> </center>
         <h1 className = 'produto-nome'>{produto.nome}</h1>
         <label>{produto.marca}</label>
         <label>{produto.preco} </label>
-        <button onClick={()=> click()}   style={{fontSize: '30px'}}>Adicionar ao carrinho</button>
+        <button onClick={()=> click()}   style={{fontSize: '15px'} }>Adicionar ao carrinho</button>
     </div>
    
   
